@@ -29,11 +29,4 @@ class User
         return $this->id;
     }
 
-    public function isSame(User $user){
-        if ($this->id === $user->getId()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }

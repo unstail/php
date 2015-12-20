@@ -10,10 +10,5 @@ use shop\Items\Product\ProductPackageService\ProductPackageTrait;
   class Book extends PolygraphyProduct implements ProductPackageInterface
   {
     use ProductPackageTrait;
-    function __construct($author, $pages, $price, $width, $height, $depth)
-    {
-      parent::__construct($author, $pages, $price, $width, $height, $depth);
-
-    }
 
   }
