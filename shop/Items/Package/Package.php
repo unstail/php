@@ -1,6 +1,6 @@
 <?php
-namespace shop\Box;
-use shop\Package\PackageInterface\PackageInterface;
+namespace shop\Items\Package;
+use shop\Items\Package\PackageService\PackageInterface;
 use shop\Items\Product\PackageService\PackageTrait;
 /**
  *

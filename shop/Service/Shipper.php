@@ -1,5 +1,5 @@
 <?php
-namespace shop\Service\Shipper;
+namespace shop\Service;
 
 class Shipper
 {

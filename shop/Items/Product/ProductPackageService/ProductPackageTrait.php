@@ -1,6 +1,6 @@
 <?php
-namespace shop\Items\Product\ProductPackageService\ProductPackageTrait;
-use shop\Package\PackageInterface\PackageInterface;
+namespace shop\Items\Product\ProductPackageService;
+use shop\Items\Package\PackageService\PackageInterface;
 
 trait ProductPackageTrait
 {
@@ -10,16 +10,23 @@ trait ProductPackageTrait
     {
         return $this->package;
     }
+    public function isInPackage() {
+        return isset($this->package);
+    }
 
     public function addToPackage(PackageInterface $package){
         $this->package = $package;
-        $package->addProduct($this);
+
+        if ($package->hasProduct()) $package->addProduct($this);
         return $this;
     }
 
     public function removeFromPackage(){
-        $this->package->removeProduct();
-        unset($this->package);
+        $package = $this->package;
+        $this->package = null;
+
+        if ($package instanceof PackageInterface && $package->hasProduct()) $package->removeProduct();
+
         return $this;
     }
 

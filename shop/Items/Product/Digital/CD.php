@@ -1,8 +1,8 @@
 <?php
-  namespace shop\Items\Product\Digital\CD;
-  use shop\Items\Product\Digital\DigitalProduct\DigitalProduct;
-  use shop\Product\ProductPackageInterface\ProductPackageInterface\ProductPackageInterface;
-  use shop\Items\Product\ProductPackageService\ProductPackageTrait\ProductPackageTrait;
+  namespace shop\Items\Product\Digital;
+  use shop\Items\Product\Digital\DigitalProduct;
+  use shop\Items\Product\ProductPackageService\ProductPackageInterface;
+  use shop\Items\Product\ProductPackageService\ProductPackageTrait;
 
   /**
    *

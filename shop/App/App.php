@@ -1,14 +1,16 @@
 <?php
 namespace shop\App;
 use shop\User\User;
-use shop\Items\Product\Polygraphy\Book\Book;
-use shop\Items\Product\Digital\CD\CD;
-use shop\Box\Package;
+use shop\Items\Product\Polygraphy\Book;
+use shop\Items\Product\Digital\CD;
+use shop\Items\Package\Package;
 class App
 {
     public static function run(){
 
         $packageBook = new Package(15,25,5);
+        $packageBook2 = new Package(15,25,5);
+        $packageBook3 = new Package(15,25,5);
 
         $cd = new CD(50, 80, 15, 15, 1);
         $book = new Book('Stephen King', 500, 200, 15, 25, 5);
@@ -17,17 +19,17 @@ class App
         $receiver = new User("Robert", "New-York");
 
         echo '<pre>';
-        print_r($receiver);
-        print_r($sender);
+        //print_r($receiver);
+       // print_r($sender);
 
-        print_r($cd);
+        //print_r($cd);
+       // print_r($book);
+        $book->addToPackage($packageBook);
+        $book->addToPackage($packageBook2);
+        //$packageBook->addProduct($book);
         print_r($book);
-
-
-
-        print_r($packageBook);
-
-
+        print_r($packageBook2);
+//        print_r($packageBook3);
 
         echo '</pre>';
     }

@@ -1,5 +1,5 @@
 <?php
-namespace shop\Items\Product\Digital\DigitalProduct;
+namespace shop\Items\Product\Digital;
 use shop\Items\Product\Product;
 
 abstract class DigitalProduct extends Product

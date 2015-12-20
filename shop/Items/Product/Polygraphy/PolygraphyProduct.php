@@ -1,5 +1,5 @@
 <?php
-namespace shop\Items\Product\Polygraphy\PolygraphyProduct;
+namespace shop\Items\Product\Polygraphy;
 use shop\Items\Product\Product;
 
 abstract class PolygraphyProduct extends Product
