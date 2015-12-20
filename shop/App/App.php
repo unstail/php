@@ -4,6 +4,8 @@ use shop\User\User;
 use shop\Items\Product\Polygraphy\Book;
 use shop\Items\Product\Digital\CD;
 use shop\Items\Package\Package;
+use shop\Service\Packer;
+use shop\Service\Shipper;
 class App
 {
     public static function run(){
@@ -18,19 +20,39 @@ class App
         $sender = new User("Alex", "Madrid");
         $receiver = new User("Robert", "New-York");
 
-        echo '<pre>';
+        $pack = new Packer();
+
+        $shipper = new Shipper();
+
+       // echo '<pre>';
         //print_r($receiver);
        // print_r($sender);
 
         //print_r($cd);
        // print_r($book);
-        $book->addToPackage($packageBook);
-        $book->addToPackage($packageBook2);
-        //$packageBook->addProduct($book);
-        print_r($book);
-        print_r($packageBook2);
-//        print_r($packageBook3);
 
-        echo '</pre>';
+        $packageBook->addProduct($book)
+                    ->setFrom($sender)
+                    ->setTo($receiver);
+
+        $packageBook2->addProduct($book)
+                     ->setFrom($receiver)
+                     ->setTo($sender);
+
+        //problem
+//        $book->addToPackage($packageBook);
+//        $book->addToPackage($packageBook2);
+
+        $pack->addPackage($packageBook)
+             ->addPackage($packageBook2);
+
+        //$packageBook->addProduct($book);
+        //print_r($pack);
+
+
+
+      //  echo '</pre>';
+
+        $shipper->send($pack);
     }
 }

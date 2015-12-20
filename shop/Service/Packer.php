@@ -13,6 +13,12 @@ class Packer
 
     public function addPackage(PackageInterface $package)
     {
+        $this->packages[$package->getId()] = $package;
+        return $this;
+    }
 
+    public function getPackages()
+    {
+        return $this->packages;
     }
 }

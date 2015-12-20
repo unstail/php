@@ -1,15 +1,15 @@
 <?php
 namespace shop\Service;
 
+
 class Shipper
 {
 
-    public function sendTo(User $reciver)
+    public function send(Packer $packerCollection)
     {
-        if (isset($this->product)) {
-            echo "Successfully sent to " . $reciver->getAddress();
-        } else {
-            echo "Fatal error";
+        $packs = $packerCollection->getPackages();
+        foreach ($packs as $pack) {
+            echo "Successfully sent to " .$pack->getTo()->getName() . ' - ' .$pack->getTo()->getAddress() . " from " . $pack->getFrom()->getName() . " - " . $pack->getFrom()->getAddress() . "\n";
         }
     }
 }

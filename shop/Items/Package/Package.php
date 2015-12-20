@@ -39,4 +39,5 @@ class Package implements PackageInterface
     {
         return $this->width;
     }
+
 }
