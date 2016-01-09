@@ -1,0 +1,31 @@
+---
+  -
+    title: "book_1"
+    author: "Author_Name_1"
+    type: "type_1"
+    genre: "genre_1"
+    pages: 150
+  -
+    title: "book_2"
+    author: "Author_Name_2"
+    type: "type_1"
+    genre: "genre_2"
+    pages: 200
+  -
+    title: "book_3"
+    author: "Author_Name_1"
+    type: "type_2"
+    genre: "genre_3"
+    pages: 223
+  -
+    title: "book_4"
+    author: "Author_Name_3"
+    type: "type_3"
+    genre: "genre_1"
+    pages: 189
+  -
+    title: "book_5"
+    author: "Author_Name_4"
+    type: "type_2"
+    genre: "genre_4"
+    pages: 523

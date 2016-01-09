@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <book>
+        <author>Author_Name_1</author>
+        <genre>genre_1</genre>
+        <pages>150</pages>
+        <title>book_1</title>
+        <type>type_1</type>
+    </book>
+    <book>
+        <author>Author_Name_2</author>
+        <genre>genre_2</genre>
+        <pages>200</pages>
+        <title>book_2</title>
+        <type>type_1</type>
+    </book>
+    <book>
+        <author>Author_Name_1</author>
+        <genre>genre_3</genre>
+        <pages>223</pages>
+        <title>book_3</title>
+        <type>type_2</type>
+    </book>
+    <book>
+        <author>Author_Name_3</author>
+        <genre>genre_1</genre>
+        <pages>189</pages>
+        <title>book_4</title>
+        <type>type_3</type>
+    </book>
+    <book>
+        <author>Author_Name_4</author>
+        <genre>genre_4</genre>
+        <pages>523</pages>
+        <title>book_5</title>
+        <type>type_2</type>
+    </book>
+</root>
+
